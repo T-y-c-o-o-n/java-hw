@@ -1,0 +1,5 @@
+package md2html;
+
+public enum Mark {
+	EMPHASIS1, EMPHASIS2, STRONG1, STRONG2, STRIKEOUT, CODE, IMAGE;
+}

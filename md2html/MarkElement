@@ -1,0 +1,10 @@
+package md2html;
+
+public class MarkElement {
+	private Mark first;
+	private int pos;
+
+	public MarkElement() {
+
+	}
+}
