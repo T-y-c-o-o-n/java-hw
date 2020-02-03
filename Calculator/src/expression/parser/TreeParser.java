@@ -131,16 +131,16 @@ public class TreeParser implements Parser {
 
         private void parseUnarOper() {
             CommonExpression newNode = null;
-            if (tempCh == 'a') {
+            if (test('a')) {
                 expect("bs");
                 newNode = new Abs(null);
-            } else if (tempCh == 's') {
+            } else if (test('s')) {
                 expect("quare");
                 newNode = new Square(null);
-            } else if (tempCh == 'd') {
+            } else if (test('d')) {
                 expect("igits");
                 newNode = new Digits(null);
-            } else if (tempCh == 'r') {
+            } else if (test('r')) {
                 expect("everse");
                 newNode = new Reverse(null);
             }

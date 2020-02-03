@@ -5,7 +5,6 @@ import java.util.List;
 
 public abstract class AbstractUnarOper implements CommonExpression {
     protected CommonExpression arg;
-    protected CommonExpression parent;
     private Oper me;
 
     public AbstractUnarOper(CommonExpression arg, Oper me) {
@@ -13,28 +12,12 @@ public abstract class AbstractUnarOper implements CommonExpression {
         this.me = me;
     }
 
-    public void setArg1(CommonExpression newArg) {
+    public void setArg(CommonExpression newArg) {
         arg = newArg;
     }
 
-    public void setArg2(CommonExpression newArg) {
-        arg = newArg;
-    }
-
-    public void setParent(CommonExpression parent) {
-        this.parent = parent;
-    }
-
-    public CommonExpression getArg1() {
+    public CommonExpression getArg() {
         return arg;
-    }
-
-    public CommonExpression getArg2() {
-        return arg;
-    }
-
-    public CommonExpression getParent() {
-        return parent;
     }
 
     public int getPriority() {
@@ -63,7 +46,7 @@ public abstract class AbstractUnarOper implements CommonExpression {
     public boolean equals(Object object) {
         if (object != null && object.getClass() == getClass()) {
             AbstractUnarOper exp = (AbstractUnarOper)object;
-            return me.equals(exp.getOper()) && arg.equals(exp.getArg1());
+            return me.equals(exp.getOper()) && arg.equals(exp.getArg());
         } else {
             return false;
         }

@@ -5,7 +5,6 @@ import java.util.EnumSet;
 public abstract class AbstractBinarOper implements CommonExpression {
 	protected CommonExpression arg1;
 	protected CommonExpression arg2;
-	protected CommonExpression parent;
 	private final Oper me;
 
 	public AbstractBinarOper(CommonExpression arg1, CommonExpression arg2, Oper me) {
@@ -22,20 +21,12 @@ public abstract class AbstractBinarOper implements CommonExpression {
 		arg2 = newArg2;
 	}
 
-	public void setParent(CommonExpression parent) {
-		this.parent = parent;
-	}
-
 	public CommonExpression getArg1() {
 		return arg1;
 	}
 
 	public CommonExpression getArg2() {
 		return arg2;
-	}
-
-	public CommonExpression getParent() {
-		return parent;
 	}
 
 	public int getPriority() {

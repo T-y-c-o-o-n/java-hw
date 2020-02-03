@@ -7,7 +7,7 @@ public class Brackets extends AbstractUnarOper {
     public Brackets(CommonExpression arg) {
         super(arg, Oper.BRKTS);
         closed = false;
-        priority = 11;
+        priority = 3;
     }
 
     @Override
@@ -22,7 +22,7 @@ public class Brackets extends AbstractUnarOper {
 
     public void close() {
         closed = true;
-        priority = 11;
+        priority = 3;
     }
 
     public int evaluate(int x) {
